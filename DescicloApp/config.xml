@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" id="DescicloApp">
-	<name>DescicloApp para Opera</name>
+	<name>DescicloApp</name>
 	<description>Versao para Opera do DescicloApp, uma extensao para acessar a Desciclopedia com mais facilidade, completamente baseada na versao para Chrome</description>
 	<author href="http://www.twitter.com/alefesouza5" email="alefe.mtv@gmail.com">Alefe Souza</author>
 	<icon src="icons/icon_48.png"/>
