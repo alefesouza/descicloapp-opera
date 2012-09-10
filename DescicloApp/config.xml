@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="DescicloApp">
+<widget xmlns="http://www.w3.org/ns/widgets" id="descicloapp">
 	<name>DescicloApp</name>
-	<description>Versao para Opera do DescicloApp, uma extensao para acessar a Desciclopedia com mais facilidade, completamente baseada na versao para Chrome</description>
-	<author href="http://www.twitter.com/alefesouza5" email="alefe.mtv@gmail.com">Alefe Souza</author>
+	<description>Versao para Opera do DescicloApp, uma extensao para acessar a Desciclopedia com mais facilidade.</description>
+	<author href="http://twitter.com/alefesouza5" email="alefe.mtv@gmail.com">Alefe Souza</author>
 	<icon src="icons/icon_48.png"/>
 
       <access origin="http://desciclopedia.org/" subdomains="true"/>
@@ -10,6 +10,5 @@
       <access origin="http://pudim.info/" subdomains="true"/>
       <access origin="http://vist.as/" subdomains="true"/>
       <access origin="http://pesquisa.la/" subdomains="true"/>
-      <access origin="http://sophia.desciclopedia.org/" subdomains="true"/>
-      <access origin="http://roberto.desciclopedia.org/" subdomains="true"/>
+      <access origin="http://desnoticias.org/" subdomains="true"/>
 </widget>
