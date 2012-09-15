@@ -95,29 +95,29 @@ div.sombra:active {
 <option value="roberto.desciclopedia.org">roberto.</option>
 </select></div><input type="text" class="text" id="q" style="float:left; width: 175px; border-radius: 0px;" autocomplete="on" placeholder="Escreva algo..." name="q" /><div class="tooltip"><span>Ir a esta p&aacute;gina</span><input type="submit" id="ir" class="azul" style="width:25px; height:22px; border: #000000 solid 1px; background-image:url(imagens/avancarwp7.png); background-repeat: no-repeat; background-position: center; background-size: 25px; float:left; border-radius:0px;" value="" /></div><div class="tooltip"><span>Editar ou criar essa p&aacute;gina</span><input type="submit" id="editar" class="azul" style="width:25px; height:22px; border: #000000 solid 1px; background-image:url(imagens/novowp7.png); background-repeat: no-repeat; background-position: center; background-size: 25px; float:left; border-radius: 0px;" value="" /></div><div class="tooltip"><span>Pesquisar</span><input type="submit" id="pesquisar" class="azul" style="width:25px; height:22px; border: #000000 solid 1px; float:left; border-bottom-right-radius: 10px; border-top-right-radius: 10px; background-image:url(imagens/buscawp7.png); background-repeat: no-repeat; background-position: center; background-size: 20px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="" /></div></tr></table>
 <br><br>
-	<div onclick="window.open('http://' + document.getElementById('alternativo').value + '/wiki/P%C3%A1gina_principal', '_blank'); window.close();" class="menuitem">
+	<div id="irb" class="menuitem">
 		<img src="icons/icon.png"> Ir a Desciclop&eacute;dia
 	</div>
-	<hr>
-	<div onclick="window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Minha_p%C3%A1gina', '_blank'); window.close();" class="menuitem">
-		<img src="imagens/mafagafo.jpg" width="16px"> Minha p&aacute;gina
+<hr>
+	<div id="pagina" class="menuitem">
+		<img src="imagens/mafagafo.png" width="16px"> Minha p&aacute;gina
 	</div>
-	<div onclick="window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Minha_discuss%C3%A3o', '_blank'); window.close();" class="menuitem">
+	<div id="discussao" class="menuitem">
 		<img src="imagens/discussao.png"> Minha discuss&atilde;o
 	</div>
-	<div onclick="window.open('http://' + document.getElementById('alternativo').value + '/wiki/Special:MyContributions', '_blank'); window.close();" class="menuitem">
+	<div id="contribuicao" class="menuitem">
 		<img src="imagens/contribuicao.png" width="16px"> Minhas contribui&ccedil;&otilde;es
 	</div>
-	<div onclick="window.open( 'http://' + document.getElementById('alternativo').value + '/wiki/Especial:P%C3%A1ginas_vigiadas', '_blank'); window.close();" class="menuitem">
+	<div id="vigiado" class="menuitem">
 		<img src="imagens/vigiado.png" width="16px" height="16px"> P&aacute;ginas vigiadas </div>
 	</div>
-	<div onclick="window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Carregar_arquivo', '_blank'); window.close();" class="menuitem">
+	<div id="carregar" class="menuitem">
 		<img src="imagens/upload.png" width="16px"> Carregar arquivo
 	</div> 
-	<div class="menuitem" onclick="window.open('msg.html', '_self')"><div class="seta">
+	<div id="mensagem" class="menuitem"><div class="seta">
 		<img src="imagens/enviarmensagem.png" width="16px" height="16px"> Enviar uma mensagem </div>
-	</div> 
-	<div onclick="window.open('http://' + document.getElementById('alternativo').value + '/wiki/Special:Recentchanges/250', '_blank'); window.close();" class="menuitem">
+	</div>
+	<div id="recentes" class="menuitem">
 		<img src="imagens/mrwp7.png" width="16px" height="16px"> Mudan&ccedil;as recentes
 	</div>
 <br>

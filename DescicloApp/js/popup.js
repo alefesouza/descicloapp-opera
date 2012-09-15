@@ -32,10 +32,76 @@ function pesquisar(){
 		alert('Escreva algo primeiro: Digite na barra de texto o que você quer pesquisar na (Xvideos) Desciclopédia, ou não') }
 }
 
+function irb(){
+	window.open('http://' + document.getElementById('alternativo').value + '/wiki/P%C3%A1gina_principal'); window.close();
+}
+
+function pagina(){
+	//Eu usei window.open() porque com ele demora mais pra aparecer a url, dando a impressao de que a extensao descobriu sozinha o username
+	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Minha_p%C3%A1gina'); window.close();
+}
+
+function discussao(){
+	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Minha_discuss%C3%A3o'); window.close();
+}
+
+function contribuicao(){
+	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Special:MyContributions'); window.close();
+}
+
+function vigiado(){
+	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:P%C3%A1ginas_vigiadas'); window.close();
+}
+
+function carregar(){
+	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Carregar_arquivo'); window.close();
+}
+
+function mensagem(){
+	window.open('msg.html', '_self')
+}
+
+function recentes(){
+	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Special:Recentchanges/250'); window.close();
+}
+
+function facebook(){
+	window.open('http://facebook.com/Desciclopedia'); window.close();
+}
+
+function twitter(){
+	window.open('http://twitter.com/DaDesciclopedia', '_blank'); window.open();
+}
+
+function blog(){
+	window.open('http://descicloblog.blogspot.com', '_blank'); window.close();
+}
+
+function tumblr(){
+	window.open('http://desciclopedia.tumblr.com/', '_blank'); window.close();
+}
+
+function ajuda(){
+	window.open('paginas/faq.html', '_blank'); window.close();
+}
+
 window.onload = function(){
 		$('ir').onclick=ir;
 		$('editar').onclick=editar;
 		$('pesquisar').onclick=pesquisar;
+		$('irb').onclick=irb;
+		$('pagina').onclick=pagina;
+		$('discussao').onclick=discussao;
+		$('contribuicao').onclick=contribuicao;
+		$('vigiado').onclick=vigiado;
+		$('carregar').onclick=carregar;
+		$('mensagem').onclick=mensagem;
+		$('recentes').onclick=recentes;
+		$('facebook').onclick=facebook;
+		$('twitter').onclick=twitter;
+		$('blog').onclick=blog;
+		$('tumblr').onclick=tumblr;
+		$('ajuda').onclick=ajuda;
 }
 
 window.onkeypress = function(){
