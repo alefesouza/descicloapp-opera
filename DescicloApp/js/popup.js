@@ -66,7 +66,7 @@ function recentes(){
 }
 
 function facebook(){
-	window.open('http://facebook.com/Desciclopedia'); window.close();
+	window.open('http://facebook.com/Desciclopedia', '_blank'); window.close();
 }
 
 function twitter(){
@@ -79,10 +79,6 @@ function blog(){
 
 function tumblr(){
 	window.open('http://desciclopedia.tumblr.com/', '_blank'); window.close();
-}
-
-function ajuda(){
-	window.open('paginas/faq.html', '_blank'); window.close();
 }
 
 window.onload = function(){
@@ -101,7 +97,6 @@ window.onload = function(){
 		$('twitter').onclick=twitter;
 		$('blog').onclick=blog;
 		$('tumblr').onclick=tumblr;
-		$('ajuda').onclick=ajuda;
 }
 
 window.onkeypress = function(){
