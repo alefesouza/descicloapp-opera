@@ -1,15 +1,15 @@
 window.addEventListener( 'load', function(){
-			var theButton;
+			var AloogleDescicloAppButton;
 			var ToolbarUIItemProperties = {
 					disabled: false,
 					title: 'Desciclop\u00E9dia',
 					icon: 'icons/icon.png',
 					popup: {
 						href: 'popup.html',
-						width: 320,
-						height: 369
+						width: 345,
+						height: 410
 					}
 				}
-			theButton = opera.contexts.toolbar.createItem(ToolbarUIItemProperties);
-			opera.contexts.toolbar.addItem(theButton);
+			AloogleDescicloAppButton = opera.contexts.toolbar.createItem(ToolbarUIItemProperties);
+			opera.contexts.toolbar.addItem(AloogleDescicloAppButton);
 		}, false );

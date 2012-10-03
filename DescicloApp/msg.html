@@ -6,7 +6,15 @@
 <link rel="stylesheet" href="css/select.css" />
 <link rel="stylesheet" href="css/button.css" />
 <link rel="stylesheet" href="css/inputtext.css" />
-<link rel="stylesheet" href="css/tooltip.css" /> 
+<link rel="stylesheet" href="css/tooltip.css" />
+<script src="js/jquery/modernizr-1.7.min.js"></script>
+<script src="js/jquery/jquery.min.js"></script>
+<script src="js/jquery/jquery.ui.core.js"></script>
+<script src="js/jquery/jquery.ui.widget.js"></script>
+<script src="js/jquery/jquery.ui.button.js"></script>
+<script src="js/jquery/jquery.ui.position.js"></script>
+<script src="js/jquery/jquery.ui.dialog.js"></script>
+<link rel="stylesheet" href="css/jquery/jquery.ui.all.css" /> 
 <script src="js/msg.js"></script>
 <style type="text/css">
 body {
@@ -50,7 +58,16 @@ body {
 <option value="roberto.desciclopedia.org">roberto.</option>
 </select></div><input type="text" id="q" autocomplete="on" class="text" id="q" style="float:left; width: 255px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; float: left;" placeholder="Enviar para..." name="qmsg" /></div></tr></table>
 <br><br>
-<div><div class="tooltip5"><span>Enviar mensagem (discuss&atilde;o)</span><input type="submit" id="ir" style="min-width: 4em; border-top-right-radius: 0px; border-bottom-right-radius: 0px; float: left; width: 152px;" value="Mensagem" /></div><div class="tooltip5"><span>Enviar e-mail (contatar usu&aacute;rio)</span><input type="submit" id="editar" value="E-mail" style="min-width: 4em; border-top-left-radius: 0px; border-bottom-left-radius: 0px; float: left; width: 152px;" /></div><div>
+<div><div class="tooltip5"><span>Enviar mensagem (discuss&atilde;o)</span><input type="submit" id="mensagem" style="min-width: 4em; border-top-right-radius: 0px; border-bottom-right-radius: 0px; float: left; width: 152px;" value="Mensagem" /></div><div class="tooltip5"><span>Enviar e-mail (contatar usu&aacute;rio)</span><input type="submit" id="email" value="E-mail" style="min-width: 4em; border-top-left-radius: 0px; border-bottom-left-radius: 0px; float: left; width: 152px;" /></div><div>
+
+
+
+<div style="display:none;">
+<div id="alerta-mensagem" title="DescicloApp"><p>Escreva algo primeiro:</p><p>Digite na barra de texto o username de um usuário que voc&ecirc; quer enviar uma mensagem <s>safada</s>, via p&aacute;gina de discuss&atilde;o</p>
+</div>
+<div id="alerta-email" title="DescicloApp"><p>Escreva algo primeiro:</p><p>Digite na barra de texto o username de um usu&aacute;rio que voc&ecirc; quer enviar um e-mail na Desciclop&eacute;dia, via Contatar usu&aacute;rio</p>
+</div>
+</div>
 </body>
 </head>
 </html>
