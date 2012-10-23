@@ -1,7 +1,3 @@
-function $$(id){  
-		return document.getElementById(id);  
-	}  
-
 function enter(){
 	if(event.keyCode=='13'){
 		window.open('http://' + document.getElementById('alternativo').value + '/index.php?title=User_talk:' + document.getElementById('q').value + '&action=edit&section=new'); window.close(); }
@@ -54,17 +50,12 @@ function restaurar() {
 }
 
 window.onload = function(){
-	set_css = function() {
-		$('hr').css('background-color',localStorage.getItem('background-color'));
-	};
-	if (Modernizr.localstorage) {
-		set_css();
-	}
-	$$('voltar').onclick = function(){  
+	$('hr').css('background-color',localStorage.getItem('hr-color'));
+	$('#voltar').click(function(){  
 		window.location="popup.html";
-	}
-	$$('mensagem').onclick=mensagem;
-	$$('email').onclick=email;
+	});
+	$('#mensagem').click(function() { mensagem() });
+	$('#email').click(function() { email() });
 	restaurar();
 }
 

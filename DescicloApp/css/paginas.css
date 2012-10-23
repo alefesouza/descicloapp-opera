@@ -36,7 +36,6 @@ a.script:active {
 }
 
 #navbar-content-title {
-  padding-end: 24px;
   color: #333;
   cursor: pointer;
   font-size: 200%;
@@ -61,7 +60,6 @@ a.script:active {
 }
 
 #navbar-container {
-  border-end: 1px solid #c6c9ce;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -114,7 +112,6 @@ html.hide-menu #navbar-container {
 
 #mainview {
   box-align: stretch;
-  padding-start: 216px;
   margin: 0;
   position: absolute;
   left: 216px;
@@ -122,9 +119,6 @@ html.hide-menu #navbar-container {
   top: 0;
   bottom: 0;
   z-index: 1;
-}
-
-html.hide-menu #mainview {
 }
 
 #mainview-content {
@@ -136,7 +130,7 @@ html.hide-menu #mainview {
   box-sizing: border-box;
   max-width: 888px;
   min-width: 600px;
-   left: 300px;
+  left: 300px;
   padding: 0 24px;
 }
 
@@ -145,7 +139,6 @@ div.disabled {
 }
 
 .page h1 {
-  padding-end: 24px;
   border-bottom: 1px solid #eeeeee;
   color: #333;
   font-size: 200%;
