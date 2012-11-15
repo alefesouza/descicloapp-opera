@@ -168,7 +168,7 @@ function facebook(){
 }
 
 function twitter(){
-	window.open('http://twitter.com/DaDesciclopedia', '_blank'); window.open();
+	window.open('http://twitter.com/DaDesciclopedia', '_blank'); window.close();
 }
 
 function blog(){
@@ -217,6 +217,7 @@ window.onload = function(){
 		$('#facebook').click(function() { facebook() });
 		$('#twitter').click(function() { twitter() });
 		$('#blog').click(function() { blog() });
+		document.getElementById('q').focus();
 		restaurar();
 }
 

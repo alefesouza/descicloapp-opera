@@ -56,6 +56,7 @@ window.onload = function(){
 	});
 	$('#mensagem').click(function() { mensagem() });
 	$('#email').click(function() { email() });
+	document.getElementById('q').focus();
 	restaurar();
 }
 
