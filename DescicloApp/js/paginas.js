@@ -86,7 +86,8 @@ window.onload=function(){
 	$('#yourbase').click(function() { yourbase() });
 	$('#me').click(function() { me() });
 	$('#descicloapp').click(function() { descicloApp() });
-	$('#opera').click(function() { opera() });
+	$('#info').click(function() { descicloApp() });
+	$('#chrome').click(function() { chrome() });
 	$('#firefox').click(function() { firefox() });
 	$('#usuario').click(function() { usuario() });
 	$('#usuario').html('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu&aacute;rio:&Aacute;s');
