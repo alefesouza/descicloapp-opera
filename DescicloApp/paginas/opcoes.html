@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="../css/button.css" />
 <link rel="stylesheet" href="../css/tooltip.css" />
 <link rel="stylesheet" href="../css/select.css" />
-<script src="../js/jquery/modernizr.min.js"></script>
-<script src="../js/jquery/jquery.min.js"></script>
+<script src="../js/jquery/modernizr-2.6.2.min.js"></script>
+<script src="../js/jquery/jquery-1.9.1.min.js"></script>
 <script src="../js/jquery/jquery.ui.core.js"></script>
 <script src="../js/jquery/jquery.ui.widget.js"></script>
 <script src="../js/jquery/jquery.ui.button.js"></script>
@@ -37,6 +37,14 @@ hr {
 	border: 0px;
 	height: 1px;
 }
+
+input[type='text'] {
+	border-radius: 2px;
+}
+
+input[type='text']:focus {
+	border-color: #0000ff;
+}
 </style>
 </head>
 <body>
@@ -55,7 +63,7 @@ hr {
 <div class="page" style="display:block">
 <h1>Op&ccedil;&otilde;es</h1>
 <h3>Qual sua cor favorita?</h3>
-<div class="tooltip5"><input name="background" type="color" id="background-color" class="pickme" /><span>Essa ser&aacute; a cor dos tra&ccedil;os da extens&atilde;o</span></div><br>
+<div class="tooltip5"><input type="color" id="hr-color" class="pickme" /><span>Essa ser&aacute; a cor dos tra&ccedil;os da extens&atilde;o</span></div><br>
 <hr id="amostra">
 <h3>Qual seu dom&iacute;nio alternativo favorito?</h3>
 <select id="alternativo" style="width:200px; height:25px;">
@@ -69,6 +77,9 @@ hr {
 <option value="roberto.desciclopedia.org">roberto.desciclopedia.org</option>
 </select><br>
 <hr id="amostra2">
+<h3>Qual &eacute; seu nome de usu&aacute;rio?</h3>
+<input type="text" id="username" />
+<hr id="amostra3">
 <button id="salvar">Salvar</button>
 
 

@@ -53,16 +53,24 @@ function irb(){
 }
 
 function pagina(){
-	//Eu usei window.open() porque com ele demora mais pra aparecer a url, dando a impressao de que a extensao descobriu sozinha o username
-	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Minha_p%C3%A1gina'); window.close();
+	if(q.value != "") {
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Usu%C3%A1rio:' + document.getElementById('q').value); window.close(); }
+	else {
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Minha_p%C3%A1gina'); window.close(); } 
 }
 
 function discussao(){
-	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Minha_discuss%C3%A3o'); window.close();
+	if(q.value != "") {
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Usu%C3%A1rio_discuss%C3%A3o:' + document.getElementById('q').value); window.close(); }
+	else {
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Minha_discuss%C3%A3o'); window.close(); } 
 }
 
 function contribuicao(){
-	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Special:MyContributions'); window.close();
+	if(q.value != "") {
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Contribui%C3%A7%C3%B5es/' + document.getElementById('q').value); window.close(); }
+	else {
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Special:MyContributions'); window.close(); } 
 }
 
 function vigiado(){
@@ -78,7 +86,10 @@ function mensagem(){
 }
 
 function recentes(){
-	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Special:Recentchanges/250'); window.close();
+	if(q.value != "") {
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Special:Recentchanges/' + document.getElementById('q').value); window.close(); }
+	else {
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Special:Recentchanges/250'); window.close(); }
 }
 
 function mais(){
@@ -200,6 +211,9 @@ function restaurar() {
 
 window.onload = function(){
 		$('hr').css('background-color',localStorage.getItem('hr-color'));
+		$('#hifen').html(localStorage.getItem('hifen'));
+		$('#username').click(function() { window.open('http://' + document.getElementById('alternativo').value + '/wiki/Usu%C3%A1rio:' + localStorage.getItem('username')); window.close();});
+		$('#username').html(localStorage.getItem('username'));
 		$('#ir').click(function() { ir() });
 		$('#editar').click(function() { editar() });
 		$('#pesquisar').click(function() { pesquisar() });

@@ -2,7 +2,9 @@ function salvar() {
   var select = document.getElementById("alternativo");
   var alternativo = select.children[select.selectedIndex].value;
   localStorage["alternativo_favorito"] = alternativo;
-  localStorage["hr-color"] = document.getElementById("background-color").value;
+  localStorage["hr-color"] = document.getElementById("hr-color").value;
+  if(username.value != "") { localStorage["hifen"] = '&nbsp;-&nbsp'; } else { localStorage["hifen"] = ''};
+  localStorage["username"] = document.getElementById("username").value;
   $(function() {
 	$( "#alerta-salvar" ).dialog({
 		buttons: {
@@ -35,8 +37,9 @@ function descicloApp(){
 	
 window.onload = function() {
 	set_css = function() {
-		$('#amostra').css('background-color',document.getElementById("background-color").value);
-		$('#amostra2').css('background-color',document.getElementById("background-color").value);
+		$('#amostra').css('background-color',document.getElementById("hr-color").value);
+		$('#amostra2').css('background-color',document.getElementById("hr-color").value);
+		$('#amostra3').css('background-color',document.getElementById("hr-color").value);
 	};
 	if (Modernizr) {
 		$('.pickme').change(function() {
@@ -56,6 +59,8 @@ window.onload = function() {
 	$('#sobre').click(function() { 
 		window.location="sobre.html";
 	});
+	document.getElementById("hr-color").value = localStorage.getItem('hr-color');
+	document.getElementById("username").value = localStorage.getItem('username');
 	$('#descicloapp').click(function() { descicloApp() });
 	$('#salvar').click(function() { salvar() });
 	restaurar();
