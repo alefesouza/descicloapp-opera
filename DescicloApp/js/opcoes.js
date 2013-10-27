@@ -2,7 +2,8 @@ function salvar() {
   var select = document.getElementById("alternativo");
   var alternativo = select.children[select.selectedIndex].value;
   localStorage["alternativo_favorito"] = alternativo;
-  localStorage["hr-color"] = document.getElementById("hr-color").value;
+  localStorage["cor-favorita"] = document.getElementById("cor-favorita").value;
+  if(document.getElementById("coricone").checked == true) { localStorage["iricone"] = "imagens/avancarwp7.png"; localStorage["editaricone"] = "imagens/novowp7.png"; localStorage["pesquisaricone"] = "imagens/buscawp7.png"; } else { localStorage["iricone"] = "imagens/avancarwp7b.png"; localStorage["editaricone"] = "imagens/novowp7b.png"; localStorage["pesquisaricone"] = "imagens/buscawp7b.png";};
   if(username.value != "") { localStorage["hifen"] = '&nbsp;-&nbsp'; } else { localStorage["hifen"] = ''};
   localStorage["username"] = document.getElementById("username").value;
   $(function() {
@@ -37,9 +38,7 @@ function descicloApp(){
 	
 window.onload = function() {
 	set_css = function() {
-		$('#amostra').css('background-color',document.getElementById("hr-color").value);
-		$('#amostra2').css('background-color',document.getElementById("hr-color").value);
-		$('#amostra3').css('background-color',document.getElementById("hr-color").value);
+		$('hr').css('background-color',document.getElementById("cor-favorita").value);
 	};
 	if (Modernizr) {
 		$('.pickme').change(function() {
@@ -59,8 +58,10 @@ window.onload = function() {
 	$('#sobre').click(function() { 
 		window.location="sobre.html";
 	});
-	document.getElementById("hr-color").value = localStorage.getItem('hr-color');
+	if(localStorage.getItem('iricone') != "imagens/avancarwp7b.png") { document.getElementById("coricone").checked = true; } else { document.getElementById("coricone2").checked = true; };
+	document.getElementById("cor-favorita").value = localStorage.getItem('cor-favorita');
 	document.getElementById("username").value = localStorage.getItem('username');
+	$('hr').css('background-color',localStorage.getItem('cor-favorita'));
 	$('#descicloapp').click(function() { descicloApp() });
 	$('#salvar').click(function() { salvar() });
 	restaurar();

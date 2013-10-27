@@ -1,3 +1,7 @@
+var iricone=localStorage.getItem('iricone');
+var editaricone=localStorage.getItem('editaricone');
+var pesquisaricone=localStorage.getItem('pesquisaricone');
+
 function enter(){
 if(event.keyCode=='13'){
 		window.open('http://' + document.getElementById('alternativo').value + '/wiki/' + document.getElementById('q').value); window.close(); }
@@ -81,6 +85,10 @@ function carregar(){
 	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Carregar_arquivo'); window.close();
 }
 
+function aleatorio(){
+	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Aleat%C3%B3ria'); window.close();
+}
+
 function mensagem(){
 	window.open('msg.html', '_self')
 }
@@ -90,6 +98,10 @@ function recentes(){
 		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Special:Recentchanges/' + document.getElementById('q').value); window.close(); }
 	else {
 		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Special:Recentchanges/250'); window.close(); }
+}
+
+function recentespopup(){
+	window.open('http://aloogle.tumblr.com/descicloapp/mrpopup', 'descicloapprecentes', 'titlebar=no,width=560,height=600,left=' + (document.documentElement.clientWidth - 560) / 2 + ',top=' + (document.documentElement.clientHeight - 600) / 2);
 }
 
 function mais(){
@@ -128,9 +140,9 @@ function desnoticias(){
 
 function descionario(){
 	if(q.value != "") {
-		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Desnot%C3%ADcias:' + document.getElementById('q').value); window.close(); }
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Descion%C3%A1rio:' + document.getElementById('q').value); window.close(); }
 	else {
-		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Desnot%C3%ADcias:P%C3%A1gina_principal'); window.close(); }
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Descion%C3%A1rio:P%C3%A1gina_principal'); window.close(); }
 }
 
 function deslivros(){
@@ -190,10 +202,6 @@ function twitter(){
 	window.open('http://twitter.com/DaDesciclopedia', '_blank'); window.close();
 }
 
-function blog(){
-	window.open('http://descicloblog.blogspot.com', '_blank'); window.close();
-}
-
 function restaurar() {
   var favorite = localStorage["alternativo_favorito"];
   if (!favorite) {
@@ -210,7 +218,10 @@ function restaurar() {
 }
 
 window.onload = function(){
-		$('hr').css('background-color',localStorage.getItem('hr-color'));
+		$('hr').css('background-color',localStorage.getItem('cor-favorita'));
+		$('#ir').css({'background-image':'url(' + iricone + ')', 'background-color':localStorage.getItem('cor-favorita'), 'background-repeat': 'no-repeat', 'background-position': 'center'});
+		$('#editar').css({'background-image':'url(' + editaricone + ')', 'background-color':localStorage.getItem('cor-favorita'), 'background-repeat': 'no-repeat', 'background-position': 'center'});
+		$('#pesquisar').css({'background-image':'url(' + pesquisaricone + ')', 'background-color':localStorage.getItem('cor-favorita'), 'background-repeat': 'no-repeat', 'background-position': 'center'});
 		$('#hifen').html(localStorage.getItem('hifen'));
 		$('#username').click(function() { window.open('http://' + document.getElementById('alternativo').value + '/wiki/Usu%C3%A1rio:' + localStorage.getItem('username')); window.close();});
 		$('#username').html(localStorage.getItem('username'));
@@ -223,8 +234,10 @@ window.onload = function(){
 		$('#contribuicao').click(function() { contribuicao() });
 		$('#vigiado').click(function() { vigiado() });
 		$('#carregar').click(function() { carregar() });
+		$('#aleatorio').click(function() { aleatorio() });
 		$('#mensagem').click(function() { mensagem() });
 		$('#recentes').click(function() { recentes() });
+		$('#recentespopup').click(function() { recentespopup() });
 		document.getElementById('mais').onclick=mais;
 		$('#boteco').click(function() { boteco() });
 		$('#aa').click(function() { aa() });
@@ -240,7 +253,6 @@ window.onload = function(){
 		$('#fatos').click(function() { fatos() });
 		$('#facebook').click(function() { facebook() });
 		$('#twitter').click(function() { twitter() });
-		$('#blog').click(function() { blog() });
 		document.getElementById('q').focus();
 		restaurar();
 }

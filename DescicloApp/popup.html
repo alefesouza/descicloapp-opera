@@ -68,7 +68,6 @@ hr {
 	padding: 2px 4px;
 	vertical-align:middle;
 	border-radius: 3px;
-	-o-transition: all 0.5s;
 }
 
 .menuitem:hover {
@@ -77,7 +76,6 @@ hr {
 	cursor: pointer;
 	border: #000000 solid 1px;
 	background:url(imagens/preto_real_player.png);
-	-o-transition: all 0.5s;
 }
 
 .menuitem:active {
@@ -99,6 +97,29 @@ hr {
 
 .seta:hover {
 	background:url(imagens/frente_mouse.png) no-repeat center right;
+}
+
+#seta2 {
+	height:20px;
+	width:20px;
+	background: url('imagens/frente.png') no-repeat;
+}
+
+#seta2:hover {
+	background: url('imagens/frente_mouse.png') no-repeat;
+}
+
+#recentes {
+	width: 265px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+#recentespopup {
+	width: 20px;
+	float:right;
+	-webkit-border-bottom-left-radius: 0px;
+	-webkit-border-top-left-radius: 0px;
 }
 
 div.sombra {
@@ -149,18 +170,20 @@ div.sombra:active {
 	<div id="carregar" class="menuitem">
 		<img src="imagens/upload.png" width="16px"> Carregar arquivo
 	</div> 
+	<div id="aleatorio" class="menuitem">
+		<img src="imagens/aleatorio.png" width="16px"> P&aacute;gina aleat&oacute;ria
+	</div>
 	<div id="mensagem" class="menuitem"><div class="seta">
 		<img src="imagens/enviarmensagem.png" width="16px" height="16px"> Enviar uma mensagem </div>
 	</div>
-	<div id="recentes" class="menuitem">
+	<div class="tooltip2"><span>Visualiza&ccedil;&atilde;o r&aacute;pida</span><div id="recentespopup" class="menuitem"><div id="seta2"></div></div></div><div id="recentes" class="menuitem">
 		<img src="imagens/mrwp7.png" width="16px" height="16px"> Mudan&ccedil;as recentes
 	</div>
 	<div class="menuitem"><div id="mais"><img src="imagens/baixowp7.png" width="16px"> Mais</div>
 </div><div><div class="spoiler" style="display: none;"><div id="boteco" class="menuitem"><img src="imagens/boteco.png" width="16px" height="16px"> Boteco </div><div id="truco" class="menuitem"><img src="imagens/truco.png" width="16px" height="16px"> Mesa de Truco </div><div id="aa" class="menuitem"><img src="imagens/aa.png" width="16px" height="16px"> A.A. (Ajuda) </div><div id="desnoticias" class="menuitem"><img src="imagens/desnoticias.png" width="16px" height="16px"> Desnot&iacute;cias </div><div id="descionario" class="menuitem"><img src="imagens/descionario.png" width="16px" height="16px"> Descion&aacute;rio </div><div id="deslivros" class="menuitem"><img src="imagens/deslivros.png" width="16px" height="16px"> Deslivros </div><div id="despoesias" class="menuitem"><img src="imagens/despoesias.png" width="16px" height="16px"> Despoesias </div><div id="descifras" class="menuitem"><img src="imagens/descifras.png" width="16px" height="16px"> Descifras </div><div id="desentrevistas" class="menuitem"><img src="imagens/desentrevistas.png" width="16px" height="16px"> Desentrevistas </div><div id="descitacoes" class="menuitem"><img src="imagens/descitacoes.png" width="16px" height="16px"> Descita&ccedil;&otilde;es </div><div id="deslistas" class="menuitem"><img src="imagens/deslistas.png" width="16px" height="16px"> Deslistas </div><div id="fatos" class="menuitem"><img src="imagens/fatos.png" width="16px" height="16px"> Fatos </div>
 </div></div>
 <br>
-&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left" id="facebook"><img src="imagens/facebook.png" height="16px"></a><span>Facebook</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left" id="twitter"><img src="imagens/twitter.png" height="16px"></a><span>Twitter</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left" id="blog"><img src="imagens/blogger.ico" height="16px"></a><span>Blog</span></div><div class="tooltip2 sombra" style="float:right"><!- Nao sei porque mas essa parte nao queria abrir com window.open() na popup, nem o abrir em janela separada... -><a href="paginas/faq.html" target="_blank" class="imagem"><img src="imagens/feedback.png" height="16px"></a><span>Ajuda</span></div>
-
+&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left" id="facebook"><img src="imagens/facebook.png" height="16px"></a><span>Facebook</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left" id="twitter"><img src="imagens/twitter.png" height="16px"></a><span>Twitter</span></div><div class="tooltip2 sombra" style="float:right"><a href="paginas/faq.html" target="_blank" class="imagem"><img src="imagens/feedback.png" height="16px"></a><span>Ajuda</span></div>
 
 <div style="display:none;">
 <div id="alerta-ir" title="DescicloApp"><p>Escreva algo primeiro:</p><p>Digite na barra de texto que p&aacute;gina voc&ecirc; quer ir na Desciclop&eacute;dia, poser</p>
