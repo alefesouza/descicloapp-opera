@@ -1,37 +1,21 @@
 function enter(){
 	if(event.keyCode=='13'){
-		window.open('http://' + document.getElementById('alternativo').value + '/index.php?title=User_talk:' + document.getElementById('q').value + '&action=edit&section=new'); window.close(); }
+		window.open('http://' + document.getElementById('alternativo').value + '/index.php?title=User_talk:' + document.getElementById('q').value + '&action=edit&section=new') }
 }
 
 function mensagem(){
 	if(q.value != "") {
-		//Coloquei e ingles (user_talk) porque se colocasse em portugues (Usu%C3%A1rio_Discuss%C3%A3o) dava um erro estranho quando o user tinha acento
-		window.open('http://' + document.getElementById('alternativo').value + '/index.php?title=User_talk:' + document.getElementById('q').value + '&action=edit&section=new'); window.close(); }
+		//Coloquei em ingles (user_talk) porque se colocasse em portugues (Usu%C3%A1rio_Discuss%C3%A3o) dava um erro estranho quando o user tinha acento
+		window.open('http://' + document.getElementById('alternativo').value + '/index.php?title=User_talk:' + document.getElementById('q').value + '&action=edit&section=new') }
 	else {
-		$(function() {
-			$( "#alerta-mensagem" ).dialog({
-				buttons: {
-					Ok: function() {
-					$( this ).dialog( "close" );
-				}
-			}
-		});
-	}); }
+		alert('Escreva algo primeiro: Digite na barra de texto o username de um usu\u00E1rio que voc\u00ea quer enviar uma mensagem, via p\u00E1gina de discuss\u00E3o') }
 }
 
 function email(){
 	if(q.value != "") {
-		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Contatar_usu%C3%A1rio/' + document.getElementById('q').value); window.close(); }
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Contatar_usu%C3%A1rio/' + document.getElementById('q').value) }
 	else {
-		$(function() {
-			$( "#alerta-email" ).dialog({
-				buttons: {
-					Ok: function() {
-					$( this ).dialog( "close" );
-				}
-			}
-		});
-	}); }
+		alert('Escreva algo primeiro: Digite na barra de texto o username de um usu\u00E1rio que voc\u00ea quer enviar um e-mail na Desciclop\u00E9dia, via Contatar usu\u00E1rio') }
 }
 
 function restaurar() {

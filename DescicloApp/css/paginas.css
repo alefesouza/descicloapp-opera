@@ -7,14 +7,12 @@
 
 /* Codigo copiado da antiga pagina de configuracoes do Google Chrome, usado para as paginas da extensao */
 
-/* Eu tentei adaptar pra Opera, nao ficou identica a do DescicloApp para Chrome mas ficou quase pelo menos... */
-
 body {
   cursor: default;
   font-size: 13px;
 }
 
-a:link {
+a{
   color: rgb(63, 110, 194);
 }
 
@@ -36,6 +34,8 @@ a.script:active {
 }
 
 #navbar-content-title {
+  -webkit-padding-end: 24px;
+  -webkit-user-select: none;
   color: #333;
   cursor: pointer;
   font-size: 200%;
@@ -43,14 +43,15 @@ a.script:active {
   margin: 0;
   padding-bottom: 14px;
   padding-top: 13px;
-  text-align: right;
+  text-align: end;
   text-shadow: white 0 1px 2px;
 }
 
 #main-content {
-  display: box;
+  display: -webkit-box;
   position: absolute;
   left: 0;
+  right: 0;
   top: 0;
   bottom: 0;
 }
@@ -60,13 +61,13 @@ a.script:active {
 }
 
 #navbar-container {
+  -webkit-border-end: 1px solid #c6c9ce;
   position: fixed;
   bottom: 0;
+  /* We set both left and right for the sake of RTL. */
   left: 0;
   right: 0;
   top: 0;
-  text-indent: 150px;
-  border-right: #999 solid 1px;
   width: 216px;
   z-index: 2;
 }
@@ -76,6 +77,7 @@ html.hide-menu #navbar-container {
 }
 
 #navbar-container > ul {
+  -webkit-user-select: none;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -85,7 +87,6 @@ html.hide-menu #navbar-container {
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
   color: #333;
-  text-indent: 130px;
   cursor: pointer;
   display: block;
   font-size: 105%;
@@ -93,6 +94,7 @@ html.hide-menu #navbar-container {
   padding: 7px 0;
   text-align: end;
   text-shadow: white 0 1px 1px;
+  -webkit-padding-end: 24px;
 }
 
 .navbar-item:active {
@@ -101,9 +103,8 @@ html.hide-menu #navbar-container {
 }
 
 .navbar-item-selected {
-  box-shadow: 0 1px 0 #f7f7f7;
+  -webkit-box-shadow: 0 1px 0 #f7f7f7;
   background-color: #bbcee9;
-  right: 30px;
   border-bottom: 1px solid #8faad9;
   border-top: 1px solid #8faad9;
   color: black;
@@ -111,14 +112,19 @@ html.hide-menu #navbar-container {
 }
 
 #mainview {
-  box-align: stretch;
+  -webkit-box-align: stretch;
+  -webkit-padding-start: 216px;
   margin: 0;
   position: absolute;
-  left: 216px;
+  left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   z-index: 1;
+}
+
+html.hide-menu #mainview {
+  -webkit-padding-start: 0;
 }
 
 #mainview-content {
@@ -130,7 +136,7 @@ html.hide-menu #navbar-container {
   box-sizing: border-box;
   max-width: 888px;
   min-width: 600px;
-  left: 300px;
+   left: 300px;
   padding: 0 24px;
 }
 
@@ -138,7 +144,67 @@ div.disabled {
   color: #888;
 }
 
+/* TEXT */
+input[type='password'],
+input[type='text'],
+input[type='url'],
+input:not([type]) {
+  -webkit-border-radius: 2px;
+  border: 1px solid #aaa;
+  font-size: inherit;
+  padding: 3px;
+}
+
+input[type='text']:disabled {
+  color: #888;
+}
+
+/* Elements that need to be LTR even in an RTL context, but should align
+ * right. (Namely, URLs, search engine names, etc.)
+ */
+html[dir='rtl'] .weakrtl {
+  direction: ltr;
+  text-align: right;
+}
+
+/* Input fields in search engine table need to be weak-rtl. Since those input
+ * fields are generated for all cr.ListItem elements (and we only want weakrtl
+ * on some), the class needs to be on the enclosing div.
+ */
+html[dir='rtl'] div.weakrtl input {
+  direction: ltr;
+  text-align: right;
+}
+
+html[dir='rtl'] .favicon-cell.weakrtl {
+  -webkit-padding-end: 22px;
+  -webkit-padding-start: 0;
+}
+
+/* weakrtl for selection drop downs needs to account for the fact that
+ * Webkit does not honor the text-align attribute for the select element.
+ * (See Webkit bug #40216)
+ */
+html[dir='rtl'] select.weakrtl {
+  direction: rtl;
+}
+
+html[dir='rtl'] select.weakrtl option {
+  direction: ltr;
+}
+
+/* WebKit does not honor alignment for text specified via placeholder attrib.
+ * This CSS is a workaround. Please remove once WebKit bug is fixed.
+ * https://bugs.webkit.org/show_bug.cgi?id=63367
+ */
+html[dir='rtl'] input.weakrtl::-webkit-input-placeholder,
+html[dir='rtl'] .weakrtl input::-webkit-input-placeholder {
+  direction: rtl;
+}
+
 .page h1 {
+  -webkit-padding-end: 24px;
+  -webkit-user-select: none;
   border-bottom: 1px solid #eeeeee;
   color: #333;
   font-size: 200%;

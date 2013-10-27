@@ -1,21 +1,19 @@
 <html>
 <head>
 <title>Op&ccedil;&otilde;es - DescicloApp para Chrome</title>
-<link rel="shortcut icon" href="../icons/icon.ico" /> 
+<link rel="shortcut icon" href="../icons/icon_16.png" /> 
 <link rel="author" href="https://plus.google.com/101361157875821775334/" />
 <link rel="stylesheet" href="../css/paginas.css" />
 <link rel="stylesheet" href="../css/button.css" />
-<link rel="stylesheet" href="../css/tooltip.css" />
+<link rel="stylesheet" href="../css/scrollbar.css" />
 <link rel="stylesheet" href="../css/select.css" />
-<script src="../js/jquery/modernizr-2.6.2.min.js"></script>
+<link rel="stylesheet" href="../css/tooltip.css" />
+<link rel="stylesheet" href="../css/inputradio.css" />
+<link rel="stylesheet" href="../css/jquery/messi.css" />
 <script src="../js/jquery/jquery-1.9.1.min.js"></script>
-<script src="../js/jquery/jquery.ui.core.js"></script>
-<script src="../js/jquery/jquery.ui.widget.js"></script>
-<script src="../js/jquery/jquery.ui.button.js"></script>
-<script src="../js/jquery/jquery.ui.position.js"></script>
-<script src="../js/jquery/jquery.ui.dialog.js"></script>
-<link rel="stylesheet" href="../css/jquery/jquery.ui.all.css" />
+<script src="../js/jquery/messi.js"></script>
 <script src="../js/opcoes.js"></script>
+<script src="../js/notificacao.js"></script>
 <style type="text/css">
 body {
 	font-family: Helvetica, sans-serif;
@@ -36,20 +34,57 @@ a:visited {
 hr {
 	border: 0px;
 	height: 1px;
+	background: #000000;
+}
+
+#app-desciclopedia {
+	background: #f9edbe;
+	border: 1px solid #f0c36d;
+	-webkit-border-radius: 2px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	position: absolute;
+	top: -5px;
+	font-size: 85%;
+	line-height: 29px;
+	margin-left: 150px;
+	position: fixed;
 }
 
 input[type='text'] {
-	border-radius: 2px;
+	-webkit-border-radius: 2px;
 }
 
 input[type='text']:focus {
 	border-color: #0000ff;
+	outline: none;
+}
+
+#salvar {
+	background: #0000ff;
+	color: #ffffff;
+	font-weight: bold;
+	height: 75px;
+	width: 75px;
+	border: #000000 solid 1px;
+	right: 7;
+	top: 7;
+	-webkit-border-radius: 75px;
+	position: fixed;
+}
+
+#salvar:hover {
+	-webkit-box-shadow: 0 0 25px #888;
+	-webkit-transition: 250ms;
+}
+
+#salvar:active {
+	-webkit-box-shadow: inset 0 0 25px #888;
 }
 </style>
 </head>
 <body>
 <div id="navbar-container" style="background: url('../imagens/batata.png') no-repeat bottom #f1f1f1;">
-<div id="navbar-content-title" unselectable="on"><div id="descicloapp"><img src="../icons/icon_48.png"><br>DescicloApp</div></div>
+<div id="navbar-content-title"><div id="descicloapp"><img src="../icons/icon_48.png"><br>DescicloApp</div></div>
 <ul id="navbar">
 <li id="faq" class="navbar-item">FAQ</li>
 <li id="changelog" class="navbar-item">Changelog</li>
@@ -59,14 +94,16 @@ input[type='text']:focus {
 </div>
 <div id="mainview">
 <div id="mainview-content">
+<button id="salvar">Salvar</button>
 <div id="page-container">
 <div class="page" style="display:block">
+<div id="app-desciclopedia"></div>
 <h1>Op&ccedil;&otilde;es</h1>
-<h3>Qual sua cor favorita?</h3>
-<div><input type="color" id="cor-favorita" class="pickme" /></div><br> com &iacute;cones:<br><br><form><label><input type="radio" name="coricone" value="preto" id="coricone" checked="true"> Preto</label> <label><input type="radio" name="coricone"  id="coricone2" value="branco"> Branco</label> </form>
+<h3>Qual &eacute; sua cor favorita?</h3>
+<div><input type="color" id="cor-favorita" class="corfavorita" /></div><br> com &iacute;cones:<br><br><form><label><input type="radio" name="coricone" value="imagens/buscawp72.png"  id="coricone" checked="true" class="coriconep"> Preto</label> <label><input type="radio" name="coricone"  id="coricone2" value="imagens/buscawp72b.png" class="coriconeb"> Branco</label> </form>
 <hr>
-<h3>Qual seu dom&iacute;nio alternativo favorito?</h3>
-<select id="alternativo" style="width:200px; height:25px;">
+<h3>Qual &eacute; seu dom&iacute;nio alternativo favorito?</h3>
+<div class="tooltip5"><select id="alternativo" style="width:200px;">
 <option value="desciclopedia.org">desciclopedia.org</option>
 <option value="desciclopedia.ws">desciclopedia.ws</option>
 <option value="pudim.info">pudim.info</option>
@@ -75,15 +112,23 @@ input[type='text']:focus {
 <option value="desnoticias.org">desnoticias.org</option>
 <option value="sophia.desciclopedia.org">sophia.desciclopedia.org</option>
 <option value="roberto.desciclopedia.org">roberto.desciclopedia.org</option>
-</select><br>
+</select><span>pesquisa.la &eacute; o melhor por ser o mais est&aacute;vel</span></div>
 <hr>
 <h3>Qual &eacute; seu nome de usu&aacute;rio?</h3>
-<input type="text" id="username" />
+<div class="tooltip5"><input type="text" id="username" /><span>Deixe em branco caso voc&ecirc; n&atilde;o seja usu&aacute;rio da Desciclop&eacute;dia</span></div>
 <hr>
-<button id="salvar">Salvar</button>
-<div style="display:none">
-<div id="alerta-salvar" title="DescicloApp"><p>Tudo salvo <img src="../imagens/xd.png"></p>
-</div>
-</div>
+<h3>Habilitar a busca do DescicloApp no menu contexto?</h3>
+<div><form><label><input type="radio" name="buscacontexto" id="buscacontextosim" checked="true" class="contextoaviso" value="true"> Sim</label> <label><input type="radio" name="buscacontexto" id="buscacontextonao" class="contextoaviso" value="false"> N&atilde;o</label> </form><div id="contextoavisot"></div></div>
+<hr>
+<h3>DescicloToolbar</h3>
+<button id="escolha">Escolher quais bot&otilde;es devem aparecer</button><br><br>
+<label><input type="checkbox" id="desciclotoolbar"> Habilitar a DescicloToolbar</label><br>
+<label><input type="checkbox" id="barrabusca"> Habilitar a barra de buscas</label><br>
+<label><input type="checkbox" id="botaomais"> Usar bot&atilde;o "Mais" ao inv&eacute;s dos bot&otilde;es de namespaces</label><br>
+<label><input type="checkbox" id="botaofeedback"> Habilitar o bot&atilde;o feedback</label>
+<hr>
+<button id="redefinir" style="float:right;" title="Deixar o DescicloApp como se voc&ecirc; tivesse acabado de instalar">Redefinir ao padr&atilde;o</button><br><br>
+<br><br>
+</div></div></div></div>
 </body>
 </html>

@@ -1,24 +1,29 @@
 function voce(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Voc%C3%AA')
+	chrome.tabs.create({url: 'http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Voc%C3%AA'})
 }
 
 function servidor(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Servidor_da_Desciclop%C3%A9dia')
+	chrome.tabs.create({url: 'http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Servidor_da_Desciclop%C3%A9dia'})
+}
+
+function store(){
+	chrome.tabs.create({url: 'http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Chrome_Web_Store'})
 }
 
 function yourbase(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/All_your_base_are_belong_to_us')
+	chrome.tabs.create({url: 'http://' + localStorage.getItem('alternativo_favorito') + '/wiki/All_your_base_are_belong_to_us'})
 }
 
 function me(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu%C3%A1rio:%C3%81s');
+	chrome.tabs.create({url: 'http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu%C3%A1rio:%C3%81s'});
 }
 
 function descicloApp(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu%C3%A1rio:%C3%81s/DescicloApp')
+	chrome.tabs.create({url: 'http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu%C3%A1rio:%C3%81s/DescicloApp'})
 }
 
-function chrome(){
+//ia colocar chrome() mas parece que buga
+function chromium(){
 	window.open('http://desciclopedia.org/wiki/Usu%C3%A1rio:%C3%81s/DescicloApp/Chrome', '_blank')
 }
 
@@ -27,39 +32,31 @@ function firefox(){
 }
 
 function usuario(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu%C3%A1rio:%C3%81s');
+	chrome.tabs.create({url: 'http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu%C3%A1rio:%C3%81s'});
 }
 
 function mensagem(){
 	new Messi('<iframe id="JotFormIFrame" allowtransparency="true" src="http://aloogle.tumblr.com/descicloapp/feedback" frameborder="0" style="width:100%; height:600px; border:none;" scrolling="no"></iframe>', {title: 'Feedback'})
 }
 
-function flamewar(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Flamewar')
-}
-
-function discussao(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu%C3%A1rio_Discuss%C3%A3o:%C3%81s')
-}
-
 function johnny(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu%C3%A1rio:UltraJohnn%C3%BF')
+	chrome.tabs.create({url: 'http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu%C3%A1rio:UltraJohnn%C3%BF'})
 }
 
 function sipho(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu%C3%A1rio:Siphodemos')
+	chrome.tabs.create({url: 'http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu%C3%A1rio:Siphodemos'})
 }
 
 function ounao(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Ou_n%C3%A3o')
+	chrome.tabs.create({url: 'http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Ou_n%C3%A3o'})
 }
 
 function dar(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Dar')
+	chrome.tabs.create({url: 'http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Dar'})
 }
 
 function shareFacebook(){
-	window.open('https://www.facebook.com/sharer/sharer.php?u=http://desciclopedia.org/wiki/Usu%C3%A1rio:%C3%81s/DescicloApp', '', 'width=657,height=367')
+	window.open('https://www.facebook.com/sharer/sharer.php?u=http://desciclopedia.org/wiki/DescicloApp', '', 'width=657,height=367')
 }
 
 function shareTwitter(){
@@ -86,19 +83,16 @@ window.onload=function(){
 	});
 	$('#voce').click(function() { voce() });
 	$('#servidor').click(function() { servidor() });
+	$('#store').click(function() { store() });
 	$('#yourbase').click(function() { yourbase() });
 	$('#me').click(function() { me() });
 	$('#descicloapp').click(function() { descicloApp() });
 	$('#info').click(function() { descicloApp() });
-	$('#chrome').click(function() { chrome() });
+	$('#chrome').click(function() { chromium() });
 	$('#firefox').click(function() { firefox() });
 	$('#usuario').click(function() { usuario() });
 	$('#usuario').html('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Usu&aacute;rio:&Aacute;s');
-	$('#mensagem').click(function() {   
-		window.location="feedback.html";
-	});
-	$('#flamewar').click(function() { flamewar() });
-	$('#discussao').click(function() { discussao() });
+	$('#mensagem').click(function() { mensagem() });
 	$('#johnny').click(function() { johnny() });
 	$('#sipho').click(function() { sipho() });
 	$('#ounao').click(function() { ounao() });

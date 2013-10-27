@@ -1,9 +1,11 @@
 function novaguia(){
-	window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Special:Recentchanges/250', '_blank');
-};
+		window.open('http://' + localStorage.getItem('alternativo_favorito') + '/wiki/Special:Recentchanges/250')
+}
 
 window.onload = function(){
 	$('hr').css('background-color',localStorage.getItem('cor-favorita'));
-	$('#fechar').click(function() { window.close(); })
-	$('#novaguia').click(function() { novaguia(); window.close(); });
+	$('#voltar').click(function(){  
+		window.location="../popup.html";
+	});
+	$('#novaguia').click(function() { novaguia() });
 }

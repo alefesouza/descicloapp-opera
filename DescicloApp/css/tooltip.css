@@ -15,8 +15,8 @@ div.tooltip span {
 }
 
 div.tooltip:hover span{
-	border-radius: 5px;
-	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 	display:block; 
 	position:absolute; 
 	top:2em; 
@@ -45,8 +45,8 @@ div.tooltip2 span {
 }
 
 div.tooltip2:hover span{
-	border-radius: 5px;
-	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 	display:block; 
 	position:absolute; 
 	bottom:2em; 
@@ -76,8 +76,8 @@ div.tooltip3 span {
 }
 
 div.tooltip3:hover span{
-	border-radius: 5px;
-	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 	display:block;
 	position:absolute;
 	bottom:2em;
@@ -107,8 +107,8 @@ div.tooltip4 span {
 }
 
 div.tooltip4:hover span{
-	border-radius: 5px;
-	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 	display:block; 
 	position:absolute; 
 	bottom:1em; 
@@ -138,8 +138,8 @@ div.tooltip5 span {
 }
 
 div.tooltip5:hover span{
-	border-radius: 5px;
-	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 	display:block; 
 	position:absolute; 
 	top:3em; 
@@ -166,11 +166,11 @@ div.tooltip6:hover {
 
 div.tooltip6 span{display: none}
 div.tooltip6:hover span{
-	border-radius: 5px;
-	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 	display:block; 
 	position:absolute; 
-	top:1.7em; 
+	top:2em; 
 	font: 12px arial, verdana, helvetica, sans-serif;
 	padding:5px 10px;
 	border:1px solid #00ffff;
@@ -197,8 +197,8 @@ div.tooltip7 span {
 }
 
 div.tooltip7:hover span{
-	border-radius: 5px;
-	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 	display:block; 
 	position:absolute; 
 	bottom:1em;
